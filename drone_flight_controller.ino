@@ -3,10 +3,6 @@
 #include <SPI.h>
 #include <RF24.h>
 #include <ESP32Servo.h>
-
-// ---- I2C (MPU6050) ----
-// Uses default ESP32 I2C pins: SDA = GPIO21, SCL = GPIO22
-
 // ---- Radio ----
 #define RADIO_CE_PIN   4
 #define RADIO_CSN_PIN  5
@@ -21,7 +17,6 @@ MPU6050 mpu(Wire);
 RF24 radio(RADIO_CE_PIN, RADIO_CSN_PIN);
 Servo escM1, escM2, escM3, escM4;
 
-// This address must be IDENTICAL to the hand controller's.
 const byte address[6] = "DRONE";
 
 struct ControlPacket {
@@ -34,7 +29,7 @@ struct ControlPacket {
 
 ControlPacket packet = {0, 0, 0, 0, false};
 unsigned long lastPacketTime = 0;
-const unsigned long FAILSAFE_TIMEOUT = 300; // ms with no packet before we cut motors
+const unsigned long FAILSAFE_TIMEOUT = 300; 
 
 // ---- PID state ----
 float rollI = 0, pitchI = 0, yawI = 0;
@@ -71,7 +66,7 @@ void setup() {
   }
   radio.setPALevel(RF24_PA_LOW);
   radio.setDataRate(RF24_250KBPS);
-  radio.setChannel(76); // must match the hand controller's channel exactly
+  radio.setChannel(76); 
   radio.openReadingPipe(0, address);
   radio.startListening();
 
@@ -83,13 +78,12 @@ void setup() {
   escM2.attach(M2_PIN, ESC_MIN, ESC_MAX);
   escM3.attach(M3_PIN, ESC_MIN, ESC_MAX);
   escM4.attach(M4_PIN, ESC_MIN, ESC_MAX);
-
-  // Send minimum signal so the ESCs arm/initialize correctly.
+  
   escM1.writeMicroseconds(ESC_MIN);
   escM2.writeMicroseconds(ESC_MIN);
   escM3.writeMicroseconds(ESC_MIN);
   escM4.writeMicroseconds(ESC_MIN);
-  delay(3000); // give the ESCs time to power up and beep-arm
+  delay(3000);
 
   lastPidTime = millis();
   Serial.println("Drone flight controller ready. Waiting for armed signal...");
@@ -98,13 +92,13 @@ void setup() {
 void loop() {
   mpu.update();
 
-  // ---- Receive the latest command packet, if one arrived ----
+  // ---- Receive the latest command packet, if one arrived
   if (radio.available()) {
     radio.read(&packet, sizeof(packet));
     lastPacketTime = millis();
   }
 
-  // ---- Failsafe: cut motors if we haven't heard from the controller recently ----
+  // ---- Failsafe: cut motors if we haven't heard from the controller recently
   bool signalLost = (millis() - lastPacketTime) > FAILSAFE_TIMEOUT;
   bool motorsAllowed = packet.armed && !signalLost;
 
@@ -119,7 +113,7 @@ void loop() {
   if (dt <= 0) dt = 0.001;
   lastPidTime = now;
 
-  // ---- Roll PID: target = packet.roll (from hand), measured = currentRoll ----
+  // ---- Roll PID: target = packet.roll (from hand), measured = currentRoll
   float rollErr = packet.roll - currentRoll;
   rollI += rollErr * dt;
   rollI = constrain(rollI, -50, 50); // anti-windup clamp
@@ -167,7 +161,6 @@ void loop() {
     escM2.writeMicroseconds(ESC_MIN);
     escM3.writeMicroseconds(ESC_MIN);
     escM4.writeMicroseconds(ESC_MIN);
-    // Reset integrators so they don't wind up while sitting disarmed.
     rollI = 0; pitchI = 0; yawI = 0;
   }
 
