@@ -85,6 +85,14 @@ Receives the control packet, reads its own attitude from its onboard IMU, and ru
 
 Work in progress, built for the Hack Club Outpost hardware program (2026).
 
+## Pictures
+
+<img width="1613" height="779" alt="image" src="https://github.com/user-attachments/assets/54587ae7-fde4-4836-a1b2-5c0367ac513a" />
+<img width="1456" height="827" alt="image" src="https://github.com/user-attachments/assets/9992bacd-de86-47b3-b679-e8b23a92c7a5" />
+<img width="1384" height="868" alt="image" src="https://github.com/user-attachments/assets/0a3fcb33-52e6-4a00-8a83-8c7dd3a592c7" />
+
+
+
 ## License
 
 MIT
