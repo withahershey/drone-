@@ -4,6 +4,9 @@ A fully custom quadcopter built from raw components — no pre-made flight contr
 Built for [Hack Club Outpost](https://outpost.hackclub.com/).
 - [Lapse](https://lapse.hackclub.com/user/@withahershey2010)
 - [Stardance](https://stardance.hackclub.com/projects/30646)
+  <img width="2501" height="1279" alt="image" src="https://github.com/user-attachments/assets/26dba008-42b9-4f30-b988-483f38c76c8e" />
+<img width="2412" height="214" alt="image" src="https://github.com/user-attachments/assets/c5bc11b7-ceba-4ea8-afac-41f2ca73ba8f" />
+
 
 ## How it works
 
