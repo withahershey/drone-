@@ -1,7 +1,8 @@
 # Hand-Controlled Drone
 
 A fully custom quadcopter built from raw components — no pre-made flight controller, no off-the-shelf RC transmitter. The drone is stabilized by a self-written PID control loop running on an ESP32, and flown by tilting your hand: a second ESP32 + IMU worn on a glove/wrist strap reads your hand's orientation and sends it wirelessly to the drone in real time.
-
+[Lapse](https://lapse.hackclub.com/user/@withahershey2010)
+[Stardance](https://stardance.hackclub.com/projects/30646)
 Built for [Hack Club Outpost](https://outpost.hackclub.com/).
 
 ## How it works
