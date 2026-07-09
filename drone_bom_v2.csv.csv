@@ -1,0 +1,22 @@
+Category,Item,Spec,Qty Needed,Buy,Est. Price,Link
+Tools,Soldering iron kit (all-in-one),"60W adjustable temp, includes digital multimeter, wire stripper/cutter, solder wire, desoldering pump, tweezers, stand",1,1,18,https://www.amazon.com/gp/product/B0FR4SR9BD
+Controller Inputs,Throttle potentiometer,"10K ohm, linear taper, breadboard-friendly with knob",1,10-pack - I HAVE THIS,0,https://www.amazon.com/Breadboard-Friendly-Potentiometer-10K-Arduino/dp/B071ZVNFJ8
+Controller Inputs,Arm/disarm button,"6mm momentary tactile push button, with jumper leads",1,5-pack - HAVE THIS,0,https://www.amazon.com/MakerSpot-Momentary-Extension-Breadboard-Friendly/dp/B01J9KO7DC
+Flight Electronics,ESP32 Dev Board,ESP-WROOM-32,"2 (1 drone, 1 hand controller)",2-pack,15,https://www.amazon.com/HiLetgo-ESP32-DevKitC-ESP32-WROOM-32U-ESP-WROOM-32U-Development/dp/B09KLS2YB3
+Flight Electronics,IMU,MPU6050 (GY-521),"2 (1 drone, 1 glove)",2-pack,8,https://www.amazon.com/Ximimark-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B07MMZ37PT
+Flight Electronics,Radio (BUDGET SWAP),"nRF24L01+ basic (no PA/LNA) -- shorter range than PA/LNA version, fine for short line-of-sight test flights",2 (1 pair,2 spares included),$8,https://www.amazon.com/HiLetgo-NRF24L01-Wireless-Transceiver-Module/dp/B00LX47OCY
+Propulsion,Brushless motors,"2205 2300KV, 2xCW + 2xCCW",4,1 set of 4,37,https://www.amazon.com/Readytosky-RS2205-2300KV-Brushless-Multicopter/dp/B088NGCZ64
+Propulsion,4-in-1 ESC,"30A, BLHeli_S",1 board (drives all 4 motors),1,33,https://www.amazon.com/AERO-SELFIE-Freestyle-Supports-Lightweight/dp/B0DQXPW3H4
+Propulsion,PDB,320A Adapter Module,1 board,1,25,www.amazon.com/AERO-SELFIE-Distribution-Brushless-30-5x30-5mm/dp/B0F9WJBGFM
+Propulsion,Propellers (BUDGET SWAP),"5045 tri-blade, 2xCW + 2xCCW -- buying just 1 pack means no spares for crashes",4,1 pack,9,https://www.amazon.com/uxcell-Propellers-Quadcopter-Hexacopter-Multirotor/dp/B07Y6JZ3T2
+Power,LiPo battery (BUDGET SWAP),"4S 1500mAh, 100C, XT60 -- single battery means no backup while charging",1,1-pack,18,https://www.amazon.com/Ovonic-Battery-1550mAh-Connector-Quadcopter/dp/B08998Z859?th=1
+Power,Balance charger,"1S-6S, 80W/6A",1,1,34,https://www.amazon.com/Battery-Balance-Charger-Discharger-Digital/dp/B0F6MP2Q5D
+Power,XT60 connectors (BUDGET SWAP),"male/female pairs, for wiring battery leads/PDB",~5 pairs,5-pair pack,9,https://www.amazon.com/ZHOFONET-Connector-Adapter-Silicone-Battery/dp/B0DCFQPNFS?th=1
+Power,Low-voltage alarm,plug-in LiPo cell checker/buzzer (no coding needed),1,4-pack,9,https://www.amazon.com/gp/product/B08YY5ZL93?th=1
+Build/Assembly Hardware,Perfboard,for soldering ESP32/MPU6050/nRF24L01 in place of a PCB,a few boards,32-pc assorted kit,8,https://www.amazon.com/gp/product/B0DBZ1BXFZ
+Build/Assembly Hardware,Silicone hookup wire (BUDGET SWAP),"22AWG, red + black, for point-to-point wiring",1 kit,2-color 10ft kit,9,https://www.amazon.com/DAOKAI-Silicone-Stranded-Electrical-Printer/dp/B09TK155BW
+Build/Assembly Hardware,Heat shrink tubing,included with the connector/wire kits above -- no separate purchase needed,--,--,,(bundled with items above)
+Hand Controller,Glove or wrist strap,mounting for second ESP32 + MPU6050 + nRF24L01,1,any sporting-goods option,0,(no specific product needed)
+Frame,Custom two-tier stacked frame with arms,3D printed (handled separately),1,--,,(handled separately)
+,,,,TOTAL,240,
+,,,,out of pocket - with the grant,60,
